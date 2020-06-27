@@ -1,0 +1,98 @@
+<form >
+  <!--// premise 1-->
+  <div>
+    <div >
+      <div class="form-check form-check-inline" *ngFor="let premises of premise ; let i =  index">
+        <input
+          class="form-check-input  "
+          type="radio"
+          name="premise1"
+          [value]="premises"
+          (click)="radioChangeHandler($event)"
+        >
+        <label class="form-check-label" >{{premises}}</label>
+      </div>
+    </div>
+    <div>
+      <div class="input-group mb-3 ">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-info font-weight-bold" >premise1</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          #componentInput1
+          (change)="onInput1(componentInput1.value)"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!--premise2-->
+
+  <div>
+    <div >
+      <div class="form-check form-check-inline" *ngFor="let premises of premise">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="premise2"
+          [value]="premises"
+          (click)="radioChangeHandler2($event)"
+        >
+        <label class="form-check-label" >{{premises}}</label>
+      </div>
+    </div>
+    <div>
+      <div class="input-group mb-3 ">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-info font-weight-bold" >PREMISE2</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          #componentInput2
+          (change)="onInput2(componentInput2.value)"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!--premise3-->
+
+  <div>
+    <div >
+      <div class="form-check form-check-inline" *ngFor="let premises of premise">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="premise3"
+          [value]="premises"
+          (click)="radioChangeHandler3($event)"
+        >
+        <label class="form-check-label" >{{premises}}</label>
+      </div>
+    </div>
+    <div>
+      <div class="input-group mb-3 ">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-info font-weight-bold" >conclusion</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          #componentInput3
+          (change)="onInput3(componentInput3.value)"
+        >
+      </div>
+    </div>
+  </div>
+
+
+</form>
