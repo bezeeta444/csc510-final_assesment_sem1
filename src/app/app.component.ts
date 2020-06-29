@@ -9,8 +9,8 @@ import {CalculationService} from './calculation.service';
 })
 export class AppComponent {
 
+  // variable decralation
   answer = '';
-  title = 'csc510';
   condition = false;
   input1 = '';
   input2 = '';
@@ -21,6 +21,8 @@ export class AppComponent {
 
   constructor(private calculationService: CalculationService) {
   }
+
+  // proceed with calculation after button click
 
   onSubmit() {
     this.condition = true;
@@ -34,6 +36,7 @@ export class AppComponent {
     this.input3 = this.calculationService.onInput3();
   }
 
+  // clear everyting on dom
   onClear() {
     this.condition = false;
 
